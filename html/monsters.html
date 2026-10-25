@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage monsters - Terra Nova</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="layout.html">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="8" fill="#fff" stroke="#1f6f6b" stroke-width="2"/><circle cx="24" cy="24" r="13" fill="none" stroke="#1f6f6b" stroke-width="2.5"/><path d="M11 24h26M24 11c-6 6-6 20 0 26M24 11c6 6 6 20 0 26" fill="none" stroke="#1f6f6b" stroke-width="2"/></svg>
+            <span class="brand-name">Terra Nova</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="layout.html">Worlds</a>
+            <a href="monsters.html" aria-current="page">My worlds</a>
+            <a href="monsters.html">katka</a>
+            <a class="btn" href="layout.html">Log out</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <p class="breadcrumb"><a href="monsters.html">My worlds</a> / Elmoria</p>
+
+        <div class="page-head">
+            <h1>Elmoria &middot; monsters</h1>
+            <a class="btn" href="#">+ Add monster</a>
+        </div>
+
+        <form class="toolbar" action="#" onsubmit="return false">
+            <div class="field">
+                <label for="biome">Biome</label>
+                <select id="biome" name="biome">
+                    <option>All biomes</option>
+                    <option>Forest</option>
+                    <option>Crypt</option>
+                    <option>Caves</option>
+                    <option>Mountains</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="search">Search by name</label>
+                <input id="search" name="search" type="search" placeholder="e.g. dragon">
+            </div>
+            <p class="result-count">Found: 5</p>
+        </form>
+
+        <section aria-label="Monster list">
+            <table>
+                <thead>
+                <tr><th class="col-image">Image</th><th>Name</th><th>Biome</th><th>Danger</th><th>HP</th><th>Actions</th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="col-image" data-label="Image"><span class="thumb"></span></td>
+                    <td data-label="Name">Goblin Scout</td>
+                    <td data-label="Biome">Forest</td>
+                    <td data-label="Danger" class="danger-low">1 / 10</td>
+                    <td data-label="HP">7</td>
+                    <td data-label="Actions"><div class="actions"><a class="btn btn-outline btn-small" href="#">Edit</a><button class="btn btn-danger btn-small" type="button">Delete</button></div></td>
+                </tr>
+                <tr>
+                    <td class="col-image" data-label="Image"><span class="thumb"></span></td>
+                    <td data-label="Name">Skeleton Archer</td>
+                    <td data-label="Biome">Crypt</td>
+                    <td data-label="Danger" class="danger-low">2 / 10</td>
+                    <td data-label="HP">13</td>
+                    <td data-label="Actions"><div class="actions"><a class="btn btn-outline btn-small" href="#">Edit</a><button class="btn btn-danger btn-small" type="button">Delete</button></div></td>
+                </tr>
+                <tr>
+                    <td class="col-image" data-label="Image"><span class="thumb"></span></td>
+                    <td data-label="Name">Dire Wolf</td>
+                    <td data-label="Biome">Forest</td>
+                    <td data-label="Danger" class="danger-low">3 / 10</td>
+                    <td data-label="HP">37</td>
+                    <td data-label="Actions"><div class="actions"><a class="btn btn-outline btn-small" href="#">Edit</a><button class="btn btn-danger btn-small" type="button">Delete</button></div></td>
+                </tr>
+                <tr>
+                    <td class="col-image" data-label="Image"><span class="thumb"></span></td>
+                    <td data-label="Name">Cave Troll</td>
+                    <td data-label="Biome">Caves</td>
+                    <td data-label="Danger" class="danger-mid">6 / 10</td>
+                    <td data-label="HP">84</td>
+                    <td data-label="Actions"><div class="actions"><a class="btn btn-outline btn-small" href="#">Edit</a><button class="btn btn-danger btn-small" type="button">Delete</button></div></td>
+                </tr>
+                <tr>
+                    <td class="col-image" data-label="Image"><span class="thumb"></span></td>
+                    <td data-label="Name">Red Dragon</td>
+                    <td data-label="Biome">Mountains</td>
+                    <td data-label="Danger" class="danger-high">9 / 10</td>
+                    <td data-label="HP">200</td>
+                    <td data-label="Actions"><div class="actions"><a class="btn btn-outline btn-small" href="#">Edit</a><button class="btn btn-danger btn-small" type="button">Delete</button></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <nav class="pagination" aria-label="Pagination">
+            <a href="#">&lsaquo;</a>
+            <a href="#" aria-current="page">1</a>
+            <a href="#">2</a>
+            <a href="#">&rsaquo;</a>
+        </nav>
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <p style="margin:0">Terra Nova</p>
+    </div>
+</footer>
+</body>
+</html>
