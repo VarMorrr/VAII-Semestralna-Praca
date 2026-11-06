@@ -193,3 +193,28 @@ tbody tr:hover { background: #f4f8f6; }
     td { border: none; display: flex; justify-content: space-between; gap: 12px; padding: 6px 14px; }
     td::before { content: attr(data-label); color: var(--muted); font-size: 0.85rem; font-weight: 400; }
 }
+
+.entity-form {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.entity-form .field select,
+.entity-form .field input {
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.actions form {
+    margin: 0;
+}
