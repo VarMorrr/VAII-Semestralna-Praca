@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= App\Configuration::APP_NAME ?></title>
-    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="<?= $link->asset('favicons/apple-touch-icon.png') ?>">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= $link->asset('favicons/favicon-32x32.png') ?>">
     <link rel="icon" type="image/png" sizes="16x16" href="<?= $link->asset('favicons/favicon-16x16.png') ?>">
@@ -28,6 +27,7 @@
         <nav class="nav" aria-label="Main navigation">
             <a href="<?= $link->url('home.index') ?>">Worlds</a>
             <a href="<?= $link->url('monster.index') ?>">My worlds</a>
+            <a href="<?= $link->url('biome.index') ?>">Biomes</a>
             <?php if ($user->isLoggedIn()) { ?>
                 <span><?= e($user->getName()) ?></span>
                 <a class="btn" href="<?= $link->url('auth.logout') ?>">Log out</a>

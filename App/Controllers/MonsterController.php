@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Biome;
 use App\Models\Monster;
 use Framework\Core\BaseController;
 use Framework\Http\HttpException;
@@ -25,7 +26,7 @@ class MonsterController extends BaseController
             return $this->redirect($this->url('monster.index'));
         }
 
-        return $this->html(['monster' => $monster, 'heading' => 'Add monster'], 'form');
+        return $this->html(['monster' => $monster, 'biomes' => Biome::getAll(orderBy: 'name'), 'heading' => 'Add monster'], 'form');
     }
 
     public function edit(Request $request): Response
@@ -41,7 +42,7 @@ class MonsterController extends BaseController
             return $this->redirect($this->url('monster.index'));
         }
 
-        return $this->html(['monster' => $monster, 'heading' => 'Edit monster'], 'form');
+        return $this->html(['monster' => $monster, 'biomes' => Biome::getAll(orderBy: 'name'), 'heading' => 'Edit monster'], 'form');
     }
 
     public function delete(Request $request): Response

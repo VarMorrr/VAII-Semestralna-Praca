@@ -25,7 +25,7 @@
                     <?php $dangerClass = $monster->danger >= 7 ? 'danger-high' : ($monster->danger >= 4 ? 'danger-mid' : 'danger-low'); ?>
                     <tr>
                         <td data-label="Name"><?= e($monster->name) ?></td>
-                        <td data-label="Biome"><?= e($monster->biome) ?></td>
+                        <td data-label="Biome"><?php $biome = $monster->getBiome(); ?><?= $biome !== null ? e($biome->name) : '-' ?></td>
                         <td data-label="Danger" class="<?= $dangerClass ?>"><?= (int)$monster->danger ?> / 10</td>
                         <td data-label="HP"><?= (int)$monster->hp ?></td>
                         <td data-label="Actions">

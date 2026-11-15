@@ -2,9 +2,9 @@
 
 /** @var \Framework\Support\LinkGenerator $link */
 /** @var \App\Models\Monster $monster */
+/** @var \App\Models\Biome[] $biomes */
 /** @var string $heading */
 
-$biomes = ['Forest', 'Crypt', 'Caves', 'Mountains', 'Swamp'];
 $action = $monster->id === null
     ? $link->url('monster.add')
     : $link->url('monster.edit', ['id' => $monster->id]);
@@ -21,10 +21,10 @@ $action = $monster->id === null
         <input id="name" name="name" type="text" maxlength="100" required value="<?= e($monster->name ?? '') ?>">
     </div>
     <div class="field">
-        <label for="biome">Biome</label>
-        <select id="biome" name="biome" required>
+        <label for="biomeId">Biome</label>
+        <select id="biomeId" name="biomeId" required>
             <?php foreach ($biomes as $biome) { ?>
-                <option value="<?= $biome ?>"<?= $monster->biome === $biome ? ' selected' : '' ?>><?= $biome ?></option>
+                <option value="<?= (int)$biome->id ?>"<?= $monster->biomeId === $biome->id ? ' selected' : '' ?>><?= e($biome->name) ?></option>
             <?php } ?>
         </select>
     </div>
